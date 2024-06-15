@@ -7,7 +7,7 @@ export default function BackBtn() {
 
   return (
     <Pressable onPress={() => navigation.navigate("Root")} className="mr-5">
-      <Text className="font-Lora_400Light text-white">Go To Home</Text>
+      <Text className="font-Lora_400Light text-white">Go To Main</Text>
     </Pressable>
   );
 }

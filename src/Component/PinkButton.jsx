@@ -1,14 +1,15 @@
 import { Pressable, StyleSheet, Text, View } from "react-native";
 import React from "react";
 
-export default function PinkButton({label, onPress}) {
+export default function PinkButton({label, onPress, disabled}) {
   return (
     <Pressable
-      className="bg-customPink px-5 py-3 rounded-md" onPress={onPress}
+    className={`bg-customPink px-5 py-3 rounded-md ${disabled ? 'opacity-50' : ''}`}
+    onPress={onPress}
+    disabled={disabled}
     >
       <Text
-        className="text-lg text-white font-medium text-center"
-        style={styles.text}
+        className="text-lg text-white font-medium text-center font-Lora_400Light"
       >
      {label}
       </Text>
@@ -16,9 +17,3 @@ export default function PinkButton({label, onPress}) {
   );
 }
 
-const styles = StyleSheet.create({
-    text: {
-      fontFamily: "Lora_400Regular",
-    },
-  });
-  

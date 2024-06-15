@@ -18,6 +18,7 @@ export default function SignUpForm({
   password,
   confirmPassword,
   phoneNumber,
+  isButtonDisabled
 }) {
   const navigation = useNavigation();
   return (
@@ -64,7 +65,7 @@ export default function SignUpForm({
         />
 
         <View>
-          <PinkButton label={"Sign up"} onPress={handleSignup} />
+          <PinkButton label={"Sign up"} onPress={handleSignup} disabled={isButtonDisabled}/>
           <View className="mt-4  flex justify-center items-center">
             <Text className="font-Lora_400Light  ">
               Do you have already an account?
